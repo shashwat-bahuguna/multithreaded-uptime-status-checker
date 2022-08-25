@@ -106,10 +106,10 @@ func HandleRequest(rw http.ResponseWriter, r *http.Request) {
 
 		if err != nil {
 			rw.WriteHeader(http.StatusForbidden)
-			rw.Write([]byte(err.Error()))
+			rw.Write([]byte(err.Error() + "\n"))
 		} else {
 			log.Println("Processed Output: ", string(outp))
-			rw.Write(outp)
+			rw.Write(append(outp, '\n'))
 		}
 	}
 }

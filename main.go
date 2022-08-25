@@ -30,7 +30,8 @@ func main() {
 }
 
 /*
- POST REQUEST: curl -X POST localhost:8080/websites -d '{"websites": ["google.com", "yahoo.com", "abcd.com"]}
+ POST REQUEST: curl -X POST localhost:8080/websites -d '{"websites": ["google.com", "yahoo.com", "abcd.com"]}'
+			   curl -X POST localhost:8080/websites -d '{"websites": ["google.com", "abcd.com"]}'
 
  GET REQUEST:  curl "localhost:8080/websites"
  		       curl 'localhost:8080/websites?name=google.com'
